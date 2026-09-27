@@ -1,54 +1,68 @@
-⚡ FX Project
+# ⚡ FX Project
 
-«FX Project — Share Plugin, Bot Feature & Scraper Collection
-Creator: KyZX»
+> **Plugin • Bot Feature • Scraper • Utility • Image URL**
 
-FX Project adalah sebuah project yang berisi kumpulan plugin, fitur bot, scraper, utility, dan komponen pendukung yang dapat digunakan untuk mengembangkan berbagai kebutuhan automation dan bot.
+**FX Project** adalah project yang dibuat untuk mengembangkan, menyimpan, dan membagikan berbagai **plugin, fitur bot, scraper, utility, API integration, serta resource pendukung** dalam satu project.
 
-Project ini dibuat dengan konsep modular sehingga setiap fitur dapat dikembangkan, dipisahkan, atau digunakan kembali sesuai kebutuhan.
+Project ini dibuat dengan konsep modular sehingga setiap fitur dapat dikembangkan, digunakan kembali, atau diintegrasikan ke project lain sesuai kebutuhan.
 
 ---
 
-✦ About FX Project
+## ✦ Information
 
-FX Project dibuat sebagai tempat untuk menyimpan dan mengembangkan berbagai resource yang berhubungan dengan:
+| Information | Details |
+|---|---|
+| **Project** | FX Project |
+| **Creator** | KyZX |
+| **Type** | Plugin / Bot / Scraper / Utility |
+| **Language** | JavaScript / Node.js |
+| **Status** | Active Development |
+
+---
+
+## 📖 About
+
+FX Project merupakan kumpulan resource yang dapat digunakan untuk berbagai kebutuhan development, khususnya dalam pembuatan bot dan automation.
+
+Project ini dapat berisi:
 
 - 🤖 Bot Feature
 - 🔌 Plugin
 - 🕷️ Scraper
-- 🌐 API / Endpoint Integration
+- 🌐 API Integration
 - 🛠️ Utility
 - 📦 Module
+- 🖼️ Image URL
 - 📁 File Sharing
-- 🖼️ Image URL / Photo Raw
 - ⚙️ Automation
 - 🔧 Helper Function
 - 🧩 Custom Feature
 
-Project ini dapat digunakan sebagai dasar untuk membuat bot, menambahkan fitur baru, atau mengintegrasikan service eksternal.
+Tujuan utama project ini adalah membuat berbagai fitur dapat dikelola secara **modular, fleksibel, dan mudah dikembangkan**.
 
 ---
 
-🚀 Features
+# 🤖 Bot Features
 
-🤖 Bot Features
+FX Project dapat digunakan untuk menampung berbagai fitur bot.
 
-FX Project dapat digunakan untuk menampung berbagai fitur bot seperti:
+Contoh fitur:
 
-• Command
-• Downloader
-• Search
-• Media Processing
-• Converter
-• Information
-• Utility
-• Group Feature
-• Owner Feature
-• Admin Feature
-• Automation
+- Command
+- Downloader
+- Search
+- Media Processing
+- Converter
+- Information
+- Utility
+- Group Feature
+- Owner Feature
+- Admin Feature
+- Automation
 
-Contoh struktur:
+### Contoh Struktur
 
+```text
 plugins/
 ├── downloader/
 ├── search/
@@ -56,17 +70,28 @@ plugins/
 ├── converter/
 ├── information/
 └── misc/
+```
 
-Setiap plugin dapat memiliki fungsi dan dependency masing-masing.
+Setiap plugin dapat memiliki fungsi, konfigurasi, dan dependency masing-masing.
 
 ---
 
-🔌 Plugin
+# 🔌 Plugin
 
-Plugin merupakan modul fitur yang dapat ditambahkan ke sistem bot atau aplikasi utama.
+Plugin merupakan module atau fitur tambahan yang dapat digunakan oleh sistem bot atau aplikasi utama.
 
-Contoh:
+Plugin dibuat secara modular agar lebih mudah untuk:
 
+- Menambahkan fitur
+- Menghapus fitur
+- Memperbarui fitur
+- Mengembangkan fitur
+- Memindahkan fitur
+- Menggunakan kembali fitur
+
+### Contoh Plugin
+
+```text
 plugins/
 ├── ai.js
 ├── downloader.js
@@ -74,25 +99,39 @@ plugins/
 ├── sticker.js
 ├── tools.js
 └── uploader.js
+```
 
-Plugin dapat dibuat secara modular agar lebih mudah:
+### Contoh Plugin Sederhana
 
-- Ditambahkan
-- Dihapus
-- Diperbarui
-- Dikembangkan
-- Dipindahkan ke project lain
+```js
+module.exports = {
+    name: "example",
+    command: ["example"],
+
+    async execute(ctx) {
+        await ctx.reply("FX Project Plugin aktif!");
+    }
+};
+```
+
+Struktur file:
+
+```text
+plugins/
+└── example.js
+```
 
 ---
 
-🕷️ Scraper
+# 🕷️ Scraper
 
 FX Project juga dapat digunakan untuk menyimpan berbagai scraper.
 
-Scraper digunakan untuk mengambil data yang tersedia secara publik dari website atau service tertentu.
+Scraper digunakan untuk mengambil dan mengolah data yang tersedia secara publik dari suatu website atau service.
 
-Contoh penggunaan:
+### Alur Scraper
 
+```text
 Website
    │
    ▼
@@ -106,110 +145,186 @@ JSON / Object
    │
    ▼
 Bot / Application
+```
 
-Contoh struktur:
+### Contoh Struktur
 
+```text
 scraper/
 ├── search.js
 ├── image.js
 ├── video.js
 ├── information.js
 └── index.js
-
-«Gunakan scraper secara bertanggung jawab dan patuhi Terms of Service, robots.txt, rate limit, serta aturan website yang menjadi sumber data.»
-
----
-
-🖼️ Photo URL / Raw Image
-
-FX Project juga dapat digunakan untuk menyimpan URL mentahan foto/gambar yang dapat digunakan oleh plugin, bot, website, atau project lainnya.
-
-Contoh:
-
-assets/
-└── images/
-    ├── logo.png
-    ├── banner.png
-    ├── thumbnail.jpg
-    └── profile.png
-
-URL gambar dapat dicatat seperti:
-
-https://example.com/image.png
-
-Atau dalam format JavaScript:
-
-const image = "https://example.com/image.png";
+```
 
 Contoh penggunaan:
 
+```js
+const result = await scraper.search("example");
+
+console.log(result);
+```
+
+> Gunakan scraper secara bertanggung jawab. Pastikan penggunaan mengikuti Terms of Service, robots.txt, rate limit, dan aturan website yang menjadi sumber data.
+
+---
+
+# 🖼️ Photo URL / Raw Image
+
+FX Project juga dapat digunakan untuk menyimpan **URL mentahan foto atau gambar** yang dapat digunakan oleh bot, plugin, website, API, atau project lainnya.
+
+Contoh struktur:
+
+```text
+assets/
+├── images/
+│   ├── logo.png
+│   ├── banner.png
+│   ├── thumbnail.jpg
+│   └── profile.png
+│
+├── icons/
+└── banners/
+```
+
+### Contoh URL
+
+```text
+https://example.com/image.png
+```
+
+### Contoh JavaScript
+
+```js
+const image = "https://example.com/image.png";
+```
+
+### Contoh Object
+
+```js
 const photo = {
     url: "https://example.com/image.png",
     type: "image/png"
 };
-
-Raw URL
-
-Jika menggunakan repository GitHub sebagai penyimpanan file, raw file dapat diakses menggunakan format:
-
-https://raw.githubusercontent.com/USERNAME/REPOSITORY/BRANCH/PATH
-
-Contoh:
-
-https://raw.githubusercontent.com/KyZX/FX-Project/main/assets/images/logo.png
-
-«Ganti "USERNAME", "REPOSITORY", "BRANCH", dan "PATH" sesuai repository.»
+```
 
 ---
 
-🌐 API / Endpoint
+# 🌐 GitHub Raw URL
 
-FX Project dapat terhubung dengan API eksternal maupun endpoint milik sendiri.
+Jika file gambar disimpan di repository GitHub, file tersebut dapat digunakan melalui GitHub Raw.
 
-Contoh request:
+Format:
 
+```text
+https://raw.githubusercontent.com/USERNAME/REPOSITORY/BRANCH/PATH
+```
+
+Contoh:
+
+```text
+https://raw.githubusercontent.com/KyZX/FX-Project/main/assets/images/logo.png
+```
+
+Struktur:
+
+```text
+FX-Project/
+└── assets/
+    └── images/
+        └── logo.png
+```
+
+Kemudian URL Raw:
+
+```text
+https://raw.githubusercontent.com/KyZX/FX-Project/main/assets/images/logo.png
+```
+
+Contoh penggunaan:
+
+```js
+const assets = {
+    logo: "https://raw.githubusercontent.com/KyZX/FX-Project/main/assets/images/logo.png",
+    banner: "https://raw.githubusercontent.com/KyZX/FX-Project/main/assets/images/banner.png"
+};
+```
+
+> Pastikan file yang digunakan memang boleh dipublikasikan dan tidak mengandung informasi pribadi atau data sensitif.
+
+---
+
+# 🌐 API Integration
+
+FX Project dapat digunakan untuk mengintegrasikan API eksternal maupun API milik sendiri.
+
+### Contoh Request
+
+```js
 const response = await fetch("https://example.com/api/data");
 
 const data = await response.json();
 
 console.log(data);
+```
 
-Contoh response:
+### Contoh Response
 
+```json
 {
-  "status": true,
-  "creator": "KyZX",
-  "data": {}
+    "status": true,
+    "creator": "KyZX",
+    "data": {}
 }
+```
+
+### Contoh Struktur API
+
+```text
+api/
+├── search.js
+├── downloader.js
+├── image.js
+└── index.js
+```
 
 ---
 
-🧩 Example Plugin
+# 🧩 Utility
 
-Contoh plugin sederhana:
-
-module.exports = {
-    name: "example",
-    command: ["example"],
-
-    async execute(ctx) {
-        await ctx.reply("FX Project Plugin aktif!");
-    }
-};
-
-Struktur plugin:
-
-plugins/
-└── example.js
-
----
-
-📦 Project Structure
-
-Struktur project dapat disesuaikan dengan kebutuhan.
+Utility berisi berbagai helper atau fungsi tambahan yang digunakan oleh fitur lain.
 
 Contoh:
 
+```text
+lib/
+├── helper.js
+├── request.js
+├── uploader.js
+├── formatter.js
+└── validator.js
+```
+
+Contoh helper:
+
+```js
+function formatSize(bytes) {
+    return `${bytes} bytes`;
+}
+
+module.exports = {
+    formatSize
+};
+```
+
+---
+
+# 📦 Project Structure
+
+Berikut contoh struktur keseluruhan FX Project:
+
+```text
 FX-Project/
 │
 ├── plugins/
@@ -221,6 +336,7 @@ FX-Project/
 ├── scraper/
 │   ├── image.js
 │   ├── search.js
+│   ├── video.js
 │   └── index.js
 │
 ├── assets/
@@ -231,49 +347,66 @@ FX-Project/
 ├── lib/
 │   ├── helper.js
 │   ├── request.js
-│   └── uploader.js
+│   ├── uploader.js
+│   └── formatter.js
 │
 ├── config/
 │   └── config.js
 │
 ├── index.js
 ├── package.json
+├── .env
+├── .gitignore
 └── README.md
+```
 
 ---
 
-⚙️ Installation
+# ⚙️ Installation
 
 Clone repository:
 
+```bash
 git clone https://github.com/USERNAME/FX-Project.git
+```
 
 Masuk ke directory:
 
+```bash
 cd FX-Project
+```
 
 Install dependency:
 
+```bash
 npm install
+```
 
 Jalankan project:
 
+```bash
 npm start
+```
 
 Atau:
 
+```bash
 node index.js
+```
 
 ---
 
-🔧 Configuration
+# 🔧 Configuration
 
-Jika project membutuhkan konfigurasi, buat file:
+Konfigurasi dapat disimpan di:
 
+```text
 config/config.js
+```
 
 Contoh:
 
+```js
 module.exports = {
     creator: "KyZX",
 
@@ -285,170 +418,274 @@ module.exports = {
         baseURL: "https://example.com/api"
     }
 };
+```
 
-Jangan memasukkan credential pribadi ke repository publik.
+---
 
-Contoh data yang jangan di-upload:
+# 🔐 Environment Variables
 
-API KEY
-BOT TOKEN
-PASSWORD
-SESSION
-COOKIE
-PRIVATE KEY
-DATABASE CREDENTIAL
+Untuk data rahasia seperti API key atau token, gunakan file `.env`.
 
-Gunakan ".env" jika diperlukan:
+Contoh:
 
-BOT_TOKEN=YOUR_TOKEN
+```env
+BOT_TOKEN=YOUR_BOT_TOKEN
 API_KEY=YOUR_API_KEY
+API_URL=https://example.com/api
+```
 
-Tambahkan ".env" ke ".gitignore":
+Jangan upload `.env` ke repository publik.
 
+Tambahkan `.env` ke `.gitignore`:
+
+```gitignore
 .env
 node_modules/
 session/
 logs/
+```
+
+### Jangan Upload
+
+```text
+API KEY
+BOT TOKEN
+PASSWORD
+COOKIE
+SESSION
+PRIVATE KEY
+DATABASE CREDENTIAL
+```
 
 ---
 
-📚 Plugin Concept
+# 🔄 Update Project
 
-FX Project menggunakan konsep modular.
+Untuk mendapatkan perubahan terbaru:
 
-               FX PROJECT
-                    │
-        ┌───────────┼───────────┐
-        │           │           │
-      Plugin      Scraper      Utils
-        │           │           │
-        ▼           ▼           ▼
-      Bot       Data Source   Helper
-        │           │           │
-        └───────────┼───────────┘
-                    ▼
-                 Output
-
-Dengan sistem modular, fitur dapat dikembangkan tanpa harus mengubah keseluruhan project.
-
----
-
-🛠️ Development
-
-Untuk membuat fitur baru:
-
-1. Buat module/plugin
-2. Tambahkan logic
-3. Tambahkan dependency jika diperlukan
-4. Test fitur
-5. Dokumentasikan
-6. Commit perubahan
-7. Push ke repository
-
-Contoh:
-
-git add .
-git commit -m "feat: add new plugin"
-git push
-
----
-
-🔄 Update
-
-Untuk mengambil versi terbaru:
-
+```bash
 git pull
+```
 
 Jika terdapat dependency baru:
 
+```bash
 npm install
+```
 
 Kemudian jalankan kembali:
 
+```bash
 npm start
+```
 
 ---
 
-🧪 Testing
+# 🧪 Testing
 
-Sebelum digunakan pada production, disarankan melakukan testing terhadap:
+Sebelum digunakan dalam production, lakukan testing terhadap fitur yang dibuat.
 
+Checklist:
+
+```text
 ✓ Plugin
 ✓ Scraper
-✓ API request
-✓ Error handling
-✓ Response parsing
-✓ File upload
+✓ API Request
+✓ Error Handling
+✓ Response Parsing
+✓ File Upload
 ✓ Image URL
-✓ Bot command
-✓ Rate limit
+✓ Bot Command
+✓ Rate Limit
+✓ Dependency
+```
 
 ---
 
-🖼️ Asset & Image Hosting
+# 🛠️ Development
 
-Untuk kebutuhan gambar, beberapa opsi dapat digunakan:
+Workflow pengembangan fitur:
 
-GitHub Raw
-CDN
-Object Storage
-Image Hosting
-Server sendiri
+```text
+Create Feature
+      │
+      ▼
+Write Code
+      │
+      ▼
+Add Dependency
+      │
+      ▼
+Test Feature
+      │
+      ▼
+Fix Error
+      │
+      ▼
+Documentation
+      │
+      ▼
+Commit
+      │
+      ▼
+Push
+```
 
-Jika menggunakan GitHub Raw, pastikan file memang dimaksudkan untuk dipublikasikan.
+Contoh commit:
+
+```bash
+git add .
+
+git commit -m "feat: add new plugin"
+
+git push
+```
+
+---
+
+# 📚 Plugin Development
+
+Untuk membuat plugin baru, buat file di dalam directory plugin.
 
 Contoh:
 
-const assets = {
-    logo: "https://raw.githubusercontent.com/USERNAME/FX-Project/main/assets/images/logo.png",
+```text
+plugins/
+└── example.js
+```
 
-    banner: "https://raw.githubusercontent.com/USERNAME/FX-Project/main/assets/images/banner.png"
+Isi:
+
+```js
+module.exports = {
+    name: "example",
+
+    command: ["example"],
+
+    description: "Example FX Project plugin",
+
+    async execute(ctx) {
+        await ctx.reply("Hello from FX Project!");
+    }
 };
+```
+
+Plugin kemudian dapat dimuat oleh plugin loader atau sistem bot yang digunakan.
 
 ---
 
-⚠️ Disclaimer
+# 🔗 Sharing Resource
 
-FX Project dibuat untuk tujuan pengembangan, pembelajaran, automation, dan penggunaan yang bertanggung jawab.
+FX Project juga dapat digunakan sebagai tempat berbagi resource.
 
-Creator tidak bertanggung jawab atas penggunaan project untuk aktivitas yang:
+Resource dapat berupa:
 
-- Melanggar hukum
-- Melanggar Terms of Service suatu layanan
+```text
+Plugin
+Scraper
+Script
+JavaScript
+JSON
+Image
+Image URL
+API
+Utility
+Configuration Example
+Documentation
+```
+
+Setiap resource sebaiknya memiliki dokumentasi dan informasi penggunaan yang jelas.
+
+---
+
+# 🖼️ Asset Management
+
+Asset dapat disimpan di:
+
+```text
+assets/
+├── images/
+├── icons/
+├── banners/
+└── thumbnails/
+```
+
+Contoh:
+
+```text
+assets/
+└── images/
+    ├── logo.png
+    ├── banner.png
+    ├── icon.png
+    └── thumbnail.jpg
+```
+
+Kemudian dapat dipanggil dari project:
+
+```js
+const logo = "./assets/images/logo.png";
+```
+
+Atau menggunakan URL:
+
+```js
+const logo = "https://example.com/logo.png";
+```
+
+---
+
+# ⚠️ Disclaimer
+
+FX Project dibuat untuk tujuan:
+
+- Development
+- Learning
+- Automation
+- Experiment
+- Resource Sharing
+- Bot Development
+
+Pengguna bertanggung jawab atas penggunaan setiap plugin, scraper, API, script, dan resource yang terdapat di dalam project.
+
+Jangan gunakan project untuk:
+
+- Aktivitas ilegal
+- Spam
+- Abuse API
 - Mengambil data pribadi
-- Menyalahgunakan API
-- Melakukan spam
+- Mengakses akun tanpa izin
 - Membebani server secara berlebihan
-- Menggunakan credential milik orang lain
-- Melakukan aktivitas tanpa izin
+- Menyalahgunakan credential
+- Melanggar Terms of Service suatu layanan
 
-Pastikan setiap fitur digunakan sesuai aturan layanan yang bersangkutan.
+Selalu periksa aturan layanan yang digunakan sebelum menjalankan fitur tertentu.
 
 ---
 
-🔐 Security
+# 🔐 Security
 
-Jika menemukan masalah keamanan, jangan langsung mempublikasikan credential atau informasi sensitif ke issue.
+Jika menemukan vulnerability atau masalah keamanan, hindari mempublikasikan credential atau informasi sensitif di issue.
 
-Jangan pernah membagikan:
+Informasi yang harus dirahasiakan:
 
+```text
 Token
 API Key
 Password
 Cookie
 Session
 Private Key
-Database URL
+Database Credential
+```
 
-Gunakan environment variable untuk informasi rahasia.
+Jika project menggunakan credential, gunakan environment variable.
 
 ---
 
-📋 Roadmap
+# 🗺️ Roadmap
 
-Roadmap dapat berkembang sesuai kebutuhan project.
-
-Current
+## Current
 
 - [x] Basic Project Structure
 - [x] Plugin Support
@@ -456,8 +693,9 @@ Current
 - [x] Image URL Support
 - [x] Utility Module
 - [x] API Integration
+- [x] Resource Sharing
 
-Planned
+## Planned
 
 - [ ] More Plugins
 - [ ] More Scrapers
@@ -467,83 +705,121 @@ Planned
 - [ ] Web Dashboard
 - [ ] More Utility Tools
 - [ ] Better Documentation
+- [ ] More Image Resources
 
 ---
 
-🤝 Contributing
+# 🤝 Contributing
 
-Kontribusi dapat dilakukan melalui:
+Kontribusi terhadap FX Project terbuka selama perubahan yang dibuat tetap sesuai dengan tujuan repository.
 
-Fork
-↓
+Workflow:
+
+```text
+Fork Repository
+      │
+      ▼
 Create Branch
-↓
+      │
+      ▼
 Make Changes
-↓
+      │
+      ▼
 Test
-↓
+      │
+      ▼
 Commit
-↓
+      │
+      ▼
 Push
-↓
+      │
+      ▼
 Pull Request
+```
 
 Contoh:
 
+```bash
 git clone https://github.com/USERNAME/FX-Project.git
 
 cd FX-Project
 
 git checkout -b feature/new-plugin
+```
 
 Setelah selesai:
 
+```bash
 git add .
 
 git commit -m "feat: add new plugin"
 
 git push origin feature/new-plugin
+```
 
 Kemudian buat Pull Request.
 
 ---
 
-📜 License
+# 📜 License
 
-Jika repository belum memiliki lisensi khusus, tambahkan file "LICENSE" sesuai lisensi yang ingin digunakan.
+Jika repository menggunakan lisensi tertentu, letakkan file `LICENSE` pada root repository.
 
 Contoh lisensi yang umum:
 
+```text
 MIT
 Apache-2.0
 GPL-3.0
 BSD-3-Clause
+```
 
-Jangan mengklaim library, API, asset, atau kode pihak lain sebagai milik sendiri.
+Pastikan library, API, asset, atau source code milik pihak lain tetap mengikuti lisensi aslinya.
 
 ---
 
-👤 Creator
+# 👤 Creator
 
-KyZX
+## KyZX
 
-FX Project
+**FX Project** dibuat dan dikembangkan oleh **KyZX**.
 
-Creator : KyZX
+```text
 Project : FX Project
+Creator : KyZX
 Type    : Plugin / Bot / Scraper / Utility
+```
 
 ---
 
-⚡ FX Project
+# ⚡ FX Project
 
+```text
 ███████╗██╗  ██╗
 ██╔════╝╚██╗██╔╝
 █████╗   ╚███╔╝
 ██╔══╝   ██╔██╗
 ██║     ██╔╝ ██╗
 ╚═╝     ╚═╝  ╚═╝
+```
 
-FX Project — Build. Share. Automate.
+> **FX Project — Build. Share. Automate.**
 
-«Created by KyZX ⚡»
+Created by **KyZX** ⚡
+
+---
+
+## ⭐ Support
+
+Jika project ini bermanfaat, kamu dapat membantu dengan:
+
+- ⭐ Star repository
+- 🍴 Fork repository
+- 🐛 Report bug
+- 💡 Suggest feature
+- 🔧 Contribute
+- 📢 Share project
+
+---
+
+**© KyZX — FX Project**
