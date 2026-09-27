@@ -1,6 +1,8 @@
 # ⚡ FX Project
 
 > **Plugin • Bot Feature • Scraper • Utility • Image URL**
+> 
+<img src="https://zfile.web.id/287vrMp.jpg" alt="Teks Alternatif" width="300" align="center">
 
 **FX Project** adalah project yang dibuat untuk mengembangkan, menyimpan, dan membagikan berbagai **plugin, fitur bot, scraper, utility, API integration, serta resource pendukung** dalam satu project.
 
