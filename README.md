@@ -4,6 +4,8 @@
 > 
 <img src="https://zfile.web.id/287vrMp.jpg" alt="Teks Alternatif" width="300" align="center">
 
+Kunjungi : https://fx-codeku.zone.id 
+
 **FX Project** adalah project yang dibuat untuk mengembangkan, menyimpan, dan membagikan berbagai **plugin, fitur bot, scraper, utility, API integration, serta resource pendukung** dalam satu project.
 
 Project ini dibuat dengan konsep modular sehingga setiap fitur dapat dikembangkan, digunakan kembali, atau diintegrasikan ke project lain sesuai kebutuhan.
